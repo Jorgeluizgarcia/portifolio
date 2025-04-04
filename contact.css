@@ -1,0 +1,191 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Container principal */
+.container {
+    padding-top: 40px;
+    padding: 30px 60px;
+}
+
+/* Menu fixo no topo */
+.menu {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    border-bottom: 2px solid #8fff00;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+/* Alinhamento dos itens do menu */
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #f0f3eb;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    white-space: nowrap;
+
+}
+
+/* FORMULÁRIO */
+.informacao {
+    margin: auto;
+    background-color: white;
+    color: black;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    padding-top: 40px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+.border {
+    padding-top: 30px;
+}
+
+/* RODAPÉ */
+footer {
+    border-top: 2px solid greenyellow;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+footer a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+/*seleciona a cor ao passar o mouse por cima do menu*/
+nav a:hover {
+    color: green;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .menu ul {
+        gap: 20px;
+    }
+
+    .informacao {
+        width: 80%;
+        padding: 15px;
+        /*era 15px*/
+    }
+
+    footer {
+        width: 80%;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .informacao {
+        width: 90%;
+    }
+
+    footer {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

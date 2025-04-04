@@ -1,0 +1,201 @@
+/* Reset básico para garantir espaçamentos uniformes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: aliceblue;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Menu fixo no topo */
+.menu {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    border-bottom: 2px solid #8fff00;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+/* Alinhamento dos itens do menu */
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #f0f3eb;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    white-space: nowrap;
+
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid greenyellow;
+}
+
+.center {
+    padding: 40px;
+}
+
+/* Adiciona espaço para que o menu fixo não sobreponha o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    padding-top: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #8fff00;
+}
+
+/*Espaçamento entre paragrafo*/
+p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.identacao {
+    line-height: 1.5;
+    padding-left: 20px;
+}
+
+/* Rodapé */
+footer {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+
+h1 {
+    color: greenyellow;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin: auto;
+    padding-top: 20px;
+    width: 80%;
+}
+
+h3 {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+main {
+    margin: auto;
+    width: 90%;
+    text-align: justify;
+}
+
+/* RODAPÉ */
+footer {
+    border-top: 2px solid greenyellow;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+footer a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+nav a:hover {
+    color: green;
+}
+
+div.border {
+    padding-top: 30px;
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .menu ul {
+        gap: 20px;
+    }
+
+
+    footer {
+        width: 80%;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    footer {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

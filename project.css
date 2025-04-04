@@ -1,0 +1,174 @@
+/* Reset básico para garantir espaçamentos uniformes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Fundo escuro e texto claro */
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Menu fixo no topo */
+.menu {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    border-bottom: 2px solid #8fff00;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+/* Alinhamento dos itens do menu */
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #f0f3eb;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    white-space: nowrap;
+
+}
+
+
+/* Adiciona espaço para que o menu fixo não sobreponha o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    padding: 40px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+/* Estilização das seções */
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Título de cada seção */
+.sub-container h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Imagem responsiva */
+.sub-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Texto abaixo da imagem */
+.sub-container p {
+    font-size: 16px;
+    color: white;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* RODAPÉ */
+footer {
+    border-top: 2px solid greenyellow;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+footer a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+/*seleciona a cor ao passar o mouse por cima do menu*/
+nav a:hover {
+    color: green;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .menu ul {
+        gap: 20px;
+    }
+
+    .informacao {
+        width: 100%;
+        padding: 15px;
+        /*era 15px*/
+    }
+
+    footer {
+        width: 100%;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .informacao {
+        width: 100%;
+    }
+
+    footer {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
